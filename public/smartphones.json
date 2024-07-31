@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung Galaxy Navy",
+    "image": "samsung-galaxy-navy.png",
+    "processor": "AI-POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+  {
+    "id": 2,
+    "name": "Huawei Pura Black",
+    "image": "huawei-pura-black.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+  {
+    "id": 3,
+    "name": "Huawei Pura Green",
+    "image": "huawei-pura-green.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+
+  {
+    "id": 4,
+    "name": "Huawei Pura White",
+    "image": "huawei-pura-white.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  }
+]

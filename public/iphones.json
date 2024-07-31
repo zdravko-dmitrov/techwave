@@ -1,0 +1,31 @@
+[
+  {
+    "id": 5,
+    "name": "Iphone 14 Lime",
+    "image": "iphone14-lime.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+  {
+    "id": 6,
+    "name": "Iphone 14 Clay",
+    "image": "iphone14-clay.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+  {
+    "id": 7,
+    "name": "Iphone 14 Cherry",
+    "image": "iphone14-chery.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  },
+  {
+    "id": 8,
+    "name": "Iphone 14 Berry",
+    "image": "iphone14-berry.png",
+    "processor": "AI POWERED PROCESSOR",
+    "warranty": "3Y WARRANTY"
+  }
+  
+]
