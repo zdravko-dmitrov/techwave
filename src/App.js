@@ -10,11 +10,9 @@ function App() {
     <div className="App">
       <div className='container'>
       <Header></Header>
-      <h2>🔥BEST OFFERS</h2>
       <PhonesGrid></PhonesGrid>
       </div>
       <div className='container'>
-      <h2>🚨NEW IN</h2>
       <IphonesGrid></IphonesGrid>
       </div>
 
