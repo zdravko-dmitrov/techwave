@@ -22,6 +22,9 @@ export default function PhonesGrid() {
     phone.name.toLowerCase().includes(searchTerm)
   );
 
+  const bestOffers = filteredPhones.filter((phone) => phone.promo === "offer");
+  const newIn = filteredPhones.filter((phone) => phone.promo === "new");
+
   return (
     <div>
       <input
@@ -33,7 +36,14 @@ export default function PhonesGrid() {
       />
       <h2>🔥BEST OFFERS</h2>
       <div className="phones-grid">
-        {filteredPhones.map((phone) => (
+        {bestOffers.map((phone) => (
+          <PhoneCard phone={phone} key={phone.id}></PhoneCard>
+        ))}
+      </div>
+
+      <h2>🚨NEW IN</h2>
+      <div className="phones-grid">
+        {newIn.map((phone) => (
           <PhoneCard phone={phone} key={phone.id}></PhoneCard>
         ))}
       </div>
