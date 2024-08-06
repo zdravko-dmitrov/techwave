@@ -1,67 +1,83 @@
 [
   {
     "id": 1,
-    "name": "Samsung Galaxy Navy",
+    "name": "SAMSUNG GALAXY NAVY",
     "image": "samsung-galaxy-navy.png",
     "processor": "AI-POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "offer"
+    "promo": "offer",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The Samsung Galaxy Navy is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 2,
-    "name": "Huawei Pura Black",
+    "name": "HUAWEI PURA BALCK",
     "image": "huawei-pura-black.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "offer"
+    "promo": "offer",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The Huawei Pura is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 3,
-    "name": "Huawei Pura Green",
+    "name": "HUAWEI PURA GREEN",
     "image": "huawei-pura-green.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "offer"
+    "promo": "offer",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The Huawei Pura is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   
   {
     "id": 4,
-    "name": "Huawei Pura White",
+    "name": "HUAWEI PURA WHITE",
     "image": "huawei-pura-white.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "offer"
+    "promo": "offer",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The Huawei Pura is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 5,
-    "name": "Iphone 14 Lime",
+    "name": "IPHONE 14 LIME",
     "image": "iphone14-lime.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "new"
+    "promo": "new",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The iPhone 14 is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 6,
-    "name": "Iphone 14 Clay",
+    "name": "IPHONE 14 CLAY",
     "image": "iphone14-clay.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "new"
+    "promo": "new",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The iPhone 14 is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 7,
-    "name": "Iphone 14 Cherry",
+    "name": "IPHONE 14 CHERRY",
     "image": "iphone14-chery.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "new"
+    "promo": "new",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The iPhone 14 is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   },
   {
     "id": 8,
-    "name": "Iphone 14 Berry",
+    "name": "IPHONE 14 BERRY",
     "image": "iphone14-berry.png",
     "processor": "AI POWERED PROCESSOR",
     "warranty": "3Y WARRANTY",
-    "promo": "new"
+    "promo": "new",
+    "keyParameters": "128GB Storage, Face Recognition, High Resolution Camera, Long Battery Life, Night Mode Camera",
+    "description": "The iPhone 14 is a cutting-edge smartphone designed for the modern user. It features a sleek and durable design, with a waterproof body that can withstand accidental spills and submersion. Equipped with dual cameras, it captures stunning photos and videos with exceptional clarity. The fast charging capability ensures that the phone is ready to go in no time, while the long battery life keeps you connected throughout the day. With 5G technology, you can enjoy lightning-fast internet speeds for seamless browsing and streaming. The OLED display offers vibrant and crisp visuals, perfect for watching videos and playing games."
   }
 ]
