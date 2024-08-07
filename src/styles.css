@@ -63,6 +63,7 @@ h2{
 
 .phone-card:hover {
   transform: scale(1.03);
+  cursor: pointer; 
 }
 
 .phone-card img {
@@ -368,4 +369,10 @@ nav a:hover {
   margin-top: 20px;
   font-size: 1.2em;
   color: #555;
+}
+
+
+.popup-overlay { 
+  background:   
+rgba(0, 0, 0, 0.5);
 }

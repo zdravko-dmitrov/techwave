@@ -40,12 +40,14 @@ export default function PhonesGrid() {
 
   return (
     <div>
+      
       <input
         type="text"
         placeholder="Search phone..."
         className="search-input"
         value={searchTerm}
         onChange={handleSearchChange}
+        
       />
       
       {loading ? (
