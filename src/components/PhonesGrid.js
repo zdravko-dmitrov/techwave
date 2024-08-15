@@ -91,6 +91,7 @@ export default function PhonesGrid() {
         className="search-input"
         value={searchTerm}
         onChange={handleSearchChange}
+        
       />
       <div className="filter-bar">
         <div className="filter-slot">
@@ -106,6 +107,7 @@ export default function PhonesGrid() {
             <option>Huawei</option>
           </select>
         </div>
+      
 
         <div className="filter-slot">
           <label>Sort by</label>
