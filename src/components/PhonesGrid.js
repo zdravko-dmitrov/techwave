@@ -2,20 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../styles.css";
 import PhoneCard from "./PhoneCard";
 
-export default function PhonesGrid() {
-  const [phones, setPhones] = useState([]);
+export default function PhonesGrid({ phones, compare, toggleCompare }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
   const [sortState, setSortState] = useState("none");
   const [brand, setBrand] = useState("All Brands");
-  // const [sortAv, setSortAv] = useState(false);
 
-  useEffect(() => {
-    fetch("smartphones.json")
-      .then((response) => response.json())
-      .then((data) => setPhones(data))
-      .catch((error) => console.error("No results", error));
-  }, []);
+  // const [sortAv, setSortAv] = useState(false);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -28,12 +21,15 @@ export default function PhonesGrid() {
   };
 
   const matchesBrand = (phone, brand) => {
-    return brand === "All Brands" || phone.brand.toLowerCase() === brand.toLowerCase();
-  }
+    return (
+      brand === "All Brands" ||
+      phone.brand.toLowerCase() === brand.toLowerCase()
+    );
+  };
 
   const matchesSearchTerm = (phone, searchTerm) => {
     return phone.name.toLowerCase().includes(searchTerm.toLowerCase());
-  }
+  };
 
   useEffect(() => {
     if (loading) {
@@ -45,9 +41,9 @@ export default function PhonesGrid() {
     }
   }, [loading, searchTerm]);
 
-  const filteredPhones = phones.filter((phone) =>
-   matchesBrand(phone, brand) && matchesSearchTerm(phone, searchTerm)
-  
+  const filteredPhones = phones.filter(
+    (phone) =>
+      matchesBrand(phone, brand) && matchesSearchTerm(phone, searchTerm)
   );
 
   const sortMethods = {
@@ -91,7 +87,6 @@ export default function PhonesGrid() {
         className="search-input"
         value={searchTerm}
         onChange={handleSearchChange}
-        
       />
       <div className="filter-bar">
         <div className="filter-slot">
@@ -107,7 +102,6 @@ export default function PhonesGrid() {
             <option>Huawei</option>
           </select>
         </div>
-      
 
         <div className="filter-slot">
           <label>Sort by</label>
@@ -138,14 +132,24 @@ export default function PhonesGrid() {
           {searchTerm === "" && <h2>🔥BEST OFFERS</h2>}
           <div className="phones-grid">
             {bestOffers.sort().map((phone) => (
-              <PhoneCard phone={phone} key={phone.id} />
+              <PhoneCard
+                phone={phone}
+                key={phone.id}
+                toggleCompare={toggleCompare}
+                isCompared={compare.includes(phone.id)}
+              />
             ))}
           </div>
 
           {searchTerm === "" && <h2>🚨NEW IN</h2>}
           <div className="phones-grid">
             {newIn.map((phone) => (
-              <PhoneCard phone={phone} key={phone.id} />
+              <PhoneCard
+                phone={phone}
+                key={phone.id}
+                toggleCompare={toggleCompare}
+                isCompared={compare.includes(phone.id)}
+              />
             ))}
           </div>
 

@@ -6,7 +6,7 @@ const CustomPopup = ({ isOpen, onClose, phone }) => {
     e.target.src = "images/techwavelogo.png";
   };
 
-  const keyParameters = phone.keyParameters ? phone.keyParameters.split(',') : [];
+ 
 
   return (
     <Popup open={isOpen} closeOnDocumentClick onClose={onClose} modal nested>
@@ -17,9 +17,11 @@ const CustomPopup = ({ isOpen, onClose, phone }) => {
             <img src={`images/${phone.image}`} alt={phone.name} onError={handleError} className='modal-image' />
             <h3>Key Parameters</h3>
             <ul className='key-parameters'>
-              {keyParameters.map((param, index) => (
-                <li key={index} className="p-small">&#128073; {param.trim()}</li>
-              ))}
+            <li  className="p-small">&#128073; {phone.key1}</li>
+                <li  className="p-small">&#128073; {phone.key2}</li>
+                <li  className="p-small">&#128073; {phone.key3}</li>
+                <li  className="p-small">&#128073; {phone.key4}</li>
+                <li  className="p-small">&#128073; {phone.key5}</li>
             </ul>
           </div>
           <div className='modal-details'>
