@@ -482,4 +482,72 @@ input:checked + .slider {
   margin-top: 10px;
 
 }
+.phones-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 50%; /* Adjust this percentage to control the width of the search bar */
+  padding: 10px;
+}
+
+.content-section {
+  display: flex;
+  width: 100%;
+}
+
+.filter-section {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.phones-content {
+  width: 100%;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 0 rgba(54, 53, 53, 0.5);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.filter-slot {
+  display: flex;
+  flex-direction: column;
+}
+
+.phones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading-text {
+  margin-top: 10px;
+}
+h2 {
+  margin-right: 40vh;
+}
 
