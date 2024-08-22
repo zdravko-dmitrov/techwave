@@ -4,12 +4,17 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PhonesGrid from "./components/PhonesGrid";
 import Compare from "./components/Compare";
+import ErrorPopup from "./components/ErrorPopup";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
   const [phones, setPhones] = useState([]);
   const [compare, setCompare] = useState([]);
+  const [compareError, setCompareError] = useState(""); // New state for error message
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // State to control popup visibility
+
+  
 
   useEffect(() => {
     fetch("smartphones.json")
@@ -19,11 +24,23 @@ function App() {
   }, []);
 
   const toggleCompare = (phoneId) => {
-    setCompare((prev) =>
-      prev.includes(phoneId)
-        ? prev.filter((id) => id !== phoneId)
-        : [...prev, phoneId]
-    );
+    setCompareError(""); // Reset the error message
+    setIsPopupOpen(false); // Close the popup if it was open
+
+    setCompare((prev) => {
+      if (prev.includes(phoneId)) {
+        // If phone is already in compare, remove it
+        return prev.filter((id) => id !== phoneId);
+      } else if (prev.length < 2) {
+        // If less than 2 phones are being compared, add the new phone
+        return [...prev, phoneId];
+      } else {
+        // If there are already 2 phones being compared, show an error
+        setCompareError("You can compare only 2 phones");
+        setIsPopupOpen(true); // Open the popup
+        return prev;
+      }
+    });
   };
 
   return (
@@ -41,6 +58,15 @@ function App() {
               </li>
             </ul>
           </nav>
+
+          {/* Render Popup if error exists and popup should be visible */}
+          {isPopupOpen && (
+            <ErrorPopup
+              message={compareError}
+              onClose={() => setIsPopupOpen(false)}
+            />
+          )}
+
           <Routes>
             <Route
               path="/"

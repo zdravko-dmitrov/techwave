@@ -8,6 +8,7 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
   const [sortState, setSortState] = useState("none");
   const [brand, setBrand] = useState("All Brands");
   const [onlyAvailable, setOnlyAvailable] = useState(false);
+  
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
