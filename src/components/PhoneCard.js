@@ -20,6 +20,7 @@ export default function PhoneCard({ phone, isCompared, toggleCompare }) {
         <span className="phone-card-extras">{phone.processor}</span>
         <span className="phone-card-extras">{phone.warranty}</span>
       </div>
+
       <label className="switch">
         <input
           type="checkbox"

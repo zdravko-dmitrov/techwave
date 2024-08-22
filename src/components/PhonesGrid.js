@@ -78,18 +78,17 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
         <div className="filter-section">
           <div className="filter-bar">
             <div className="filter-slot">
-            <div className="filter-slot">
-              
-              <label>
+              <div className="filter-slot"></div>
+              <label className="filer-titles">Show</label>
+              <label className="checkbox-filter">
                 <input
                   type="checkbox"
                   checked={onlyAvailable}
                   onChange={(e) => setOnlyAvailable(e.target.checked)}
                 />
-                <span style={{ marginLeft: '5px' }}>Only available</span>
+                <span style={{ marginLeft: "2px" }}>Only available</span>
               </label>
-            </div>
-              <label>Sort by</label>
+              <label className="filer-titles">Sort by</label>
               <select
                 className="filter-dropdown"
                 defaultValue={"DEFAULT"}
@@ -104,7 +103,7 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
             </div>
 
             <div className="filter-slot">
-              <label>Filter by</label>
+              <label className="filer-titles">Filter by</label>
               <select
                 className="filter-dropdown"
                 value={brand}
@@ -115,10 +114,18 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
                 <option>Samsung</option>
                 <option>Huawei</option>
               </select>
-               
+              <button
+                className="clear-filter"
+                onClick={() => {
+                  setOnlyAvailable(false);
+                  setBrand("All Brands");
+                  setSortState("none");
+                  setSearchTerm("");
+                }}
+              >
+                Clear Filters
+              </button>
             </div>
-           
-            
           </div>
         </div>
 
@@ -127,7 +134,8 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
             <div className="spinner">
               <div className="loading-icon"></div>
               <p className="loading-text">
-                Searching for the perfect smartphone? 📱 Let's find your tech match! 🔍
+                Searching for the perfect smartphone? 📱 Let's find your tech
+                match! 🔍
               </p>
             </div>
           ) : (
@@ -160,7 +168,8 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
                 <div>
                   <p className="no-result-text">
                     📱 We couldn't find any phones matching your search. <br />
-                    Maybe it's time to check out some cool new phone cases instead? 📱
+                    Maybe it's time to check out some cool new phone cases
+                    instead? 📱
                   </p>
                   <button
                     className="modal-close-btn"
