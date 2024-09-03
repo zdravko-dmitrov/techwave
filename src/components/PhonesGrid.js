@@ -8,7 +8,9 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
   const [sortState, setSortState] = useState("none");
   const [brand, setBrand] = useState("All Brands");
   const [onlyAvailable, setOnlyAvailable] = useState(false);
-  
+  const [currentNewInPage, setCurrentNewInPage] = useState(1);
+  const [currentBestOffersPage, setCurrentBestOffersPage] = useState(1);
+  const itemsPerPage = 4;
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -62,6 +64,45 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
 
   const bestOffers = filteredPhones.filter((phone) => phone.promo === "offer");
   const newIn = filteredPhones.filter((phone) => phone.promo === "new");
+
+  const totalNewInPages = Math.ceil(newIn.length / itemsPerPage);
+  const totalBestOffersPages = Math.ceil(bestOffers.length / itemsPerPage);
+
+  const startNewInIndex = (currentNewInPage - 1) * itemsPerPage;
+  const paginatedNewIn = newIn.slice(
+    startNewInIndex,
+    startNewInIndex + itemsPerPage
+  );
+
+  const startBestOffersIndex = (currentBestOffersPage - 1) * itemsPerPage;
+  const paginatedBestOffers = bestOffers.slice(
+    startBestOffersIndex,
+    startBestOffersIndex + itemsPerPage
+  );
+
+  const handleNextNewInPage = () => {
+    if (currentNewInPage < totalNewInPages) {
+      setCurrentNewInPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousNewInPage = () => {
+    if (currentNewInPage > 1) {
+      setCurrentNewInPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  const handleNextBestOffersPage = () => {
+    if (currentBestOffersPage < totalBestOffersPages) {
+      setCurrentBestOffersPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousBestOffersPage = () => {
+    if (currentBestOffersPage > 1) {
+      setCurrentBestOffersPage((prevPage) => prevPage - 1);
+    }
+  };
 
   return (
     <div className="phones-container">
@@ -143,7 +184,7 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
             <>
               {searchTerm === "" && <h2>🔥BEST OFFERS</h2>}
               <div className="phones-grid">
-                {bestOffers.sort().map((phone) => (
+                {paginatedBestOffers.map((phone) => (
                   <PhoneCard
                     phone={phone}
                     key={phone.id}
@@ -153,9 +194,27 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
                 ))}
               </div>
 
+              <div className="pagination">
+                <button
+                  onClick={handlePreviousBestOffersPage}
+                  disabled={currentBestOffersPage === 1}
+                >
+                  Previous
+                </button>
+                <span>
+                  Page {currentBestOffersPage} of {totalBestOffersPages}
+                </span>
+                <button
+                  onClick={handleNextBestOffersPage}
+                  disabled={currentBestOffersPage === totalBestOffersPages}
+                >
+                  Next
+                </button>
+              </div>
+
               {searchTerm === "" && <h2>🚨NEW IN</h2>}
               <div className="phones-grid">
-                {newIn.map((phone) => (
+                {paginatedNewIn.map((phone) => (
                   <PhoneCard
                     phone={phone}
                     key={phone.id}
@@ -163,6 +222,24 @@ export default function PhonesGrid({ phones, compare, toggleCompare }) {
                     isCompared={compare.includes(phone.id)}
                   />
                 ))}
+              </div>
+
+              <div className="pagination">
+                <button
+                  onClick={handlePreviousNewInPage}
+                  disabled={currentNewInPage === 1}
+                >
+                  Previous
+                </button>
+                <span>
+                  Page {currentNewInPage} of {totalNewInPages}
+                </span>
+                <button
+                  onClick={handleNextNewInPage}
+                  disabled={currentNewInPage === totalNewInPages}
+                >
+                  Next
+                </button>
               </div>
 
               {filteredPhones.length === 0 && (

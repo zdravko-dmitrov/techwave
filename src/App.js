@@ -11,8 +11,8 @@ import { useState, useEffect } from "react";
 function App() {
   const [phones, setPhones] = useState([]);
   const [compare, setCompare] = useState([]);
-  const [compareError, setCompareError] = useState(""); // New state for error message
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // State to control popup visibility
+  const [compareError, setCompareError] = useState(""); 
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
 
   
 
