@@ -657,7 +657,7 @@ h2 {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 1600px; /* Set slider width */
+  width: 1300px; /* Set slider width */
   height: 525px; /* Set slider height */
   margin: 0 auto; /* Center the slider */
   max-width: 100%; /* Ensures responsiveness */
