@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import PhonesGrid from "./components/PhonesGrid";
 import Compare from "./components/Compare";
 import ErrorPopup from "./components/ErrorPopup";
+import ImageSlider from "./components/ImageSlider";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -47,6 +48,8 @@ function App() {
     <div className="App">
       <div className="container">
         <Header></Header>
+        <h1>Image Slider Example</h1>
+        <ImageSlider />
         <Router>
           <nav className="MainMenu">
             <ul>
@@ -59,7 +62,7 @@ function App() {
             </ul>
           </nav>
 
-          {/* Render Popup if error exists and popup should be visible */}
+          {}
           {isPopupOpen && (
             <ErrorPopup
               message={compareError}
