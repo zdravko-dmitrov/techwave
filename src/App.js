@@ -12,10 +12,8 @@ import { useState, useEffect } from "react";
 function App() {
   const [phones, setPhones] = useState([]);
   const [compare, setCompare] = useState([]);
-  const [compareError, setCompareError] = useState(""); 
-  const [isPopupOpen, setIsPopupOpen] = useState(false); 
-
-  
+  const [compareError, setCompareError] = useState("");
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
     fetch("smartphones.json")
@@ -25,20 +23,17 @@ function App() {
   }, []);
 
   const toggleCompare = (phoneId) => {
-    setCompareError(""); // Reset the error message
-    setIsPopupOpen(false); // Close the popup if it was open
+    setCompareError("");
+    setIsPopupOpen(false);
 
     setCompare((prev) => {
       if (prev.includes(phoneId)) {
-        // If phone is already in compare, remove it
         return prev.filter((id) => id !== phoneId);
       } else if (prev.length < 2) {
-        // If less than 2 phones are being compared, add the new phone
         return [...prev, phoneId];
       } else {
-        // If there are already 2 phones being compared, show an error
         setCompareError("You can compare only 2 phones");
-        setIsPopupOpen(true); // Open the popup
+        setIsPopupOpen(true);
         return prev;
       }
     });
